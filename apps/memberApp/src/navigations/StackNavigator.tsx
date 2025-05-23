@@ -11,6 +11,8 @@ import Help from '../screens/Settings/Help';
 import Language from '../screens/Settings/Language';
 import Profile from '../screens/Settings/Profile';
 import TabNavigator from './TabNavigator';
+import ETDistanceMeasureWithProvider from '../screens/EyeTiredness/ETDistanceMeasure';
+import DotTrackingWithProvider from '../screens/EyeTiredness/DotTracking';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +27,11 @@ const StackNavigator = () => {
         name="DistanceMeasure"
         component={DistanceMeasureWithProvider}
       />
+      <Stack.Screen
+        name="ETDistanceMeasure"
+        component={ETDistanceMeasureWithProvider}
+      />
+      <Stack.Screen name="DotTracking" component={DotTrackingWithProvider} />
       <Stack.Screen name="EyeTiredness" component={EyeTiredness} />
       <Stack.Screen name="ColorVision" component={ColorVision} />
       <Stack.Screen name="About" component={About} />

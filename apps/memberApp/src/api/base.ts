@@ -9,7 +9,7 @@ import {
   UseQueryResult,
 } from '@tanstack/react-query';
 
-const baseUrl = 'http://192.168.100.8:5000';
+const baseUrl = 'http://192.168.100.7:5000';
 // const baseUrl = BackendApiUrl;
 
 const isGetMethod = <T extends BaseApi>(method: T['Method']): method is 'GET' =>

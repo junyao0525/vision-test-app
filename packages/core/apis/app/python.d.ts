@@ -17,3 +17,23 @@ export type DetectFaceApi = {
   };
   Error: ERRORS["notFound"];
 };
+
+export type FatigueDetectionApi = {
+  Endpoint: "/fatigue/analyze/";
+  Method: "POST";
+  Body: {
+    file: FormData;
+  };
+  Response: {
+    Timestamp: string;
+    "Average EAR": number;
+    PERCLOS: number;
+    "Blink Rate (BPM)": number;
+    "Average Saccadic Velocity": number;
+    "Fatigue Level": number;
+    "Fatigue Status": "Normal" | "Moderate Fatigue" | "High Fatigue (Warning)";
+  };
+  Error: {
+    message: string;
+  };
+};

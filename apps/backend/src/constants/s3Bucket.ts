@@ -6,9 +6,9 @@ import {
   S3_SECRET_ACCESS_KEY,
 } from "./config";
 
-if (!S3_ACCESS_KEY_ID || !S3_SECRET_ACCESS_KEY) {
-  throw new Error("AWS credentials are missing");
-}
+// if (!S3_ACCESS_KEY_ID || !S3_SECRET_ACCESS_KEY) {
+//   throw new Error("AWS credentials are missing");
+// }
 
 export const s3Client = new S3Client({
   forcePathStyle: true,

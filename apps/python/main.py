@@ -4,6 +4,7 @@ from routers import mtcnn as ml
 from routers import mediaPipe as mp
 from routers import haar_cascades as hc
 from fastapi.middleware.cors import CORSMiddleware
+from routers import fatigue
 
 app = FastAPI(
     title="Modular FastAPI Service",
@@ -22,4 +23,5 @@ app.add_middleware(
 app.include_router(mp.router)
 app.include_router(hc.router)
 app.include_router(ml.router)
+app.include_router(fatigue.router)
 
